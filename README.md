@@ -1,9 +1,9 @@
 
 ## 📝 Brief
-This project is a blueprint for the development of actual web applications.
+This repository is for storing style templates for code design .
 
 ## 🛠️ Developer Tech Stack
-It is mainly used together with React environment.
+It's not a working project.
 
 ## ✨ Features
 It just contains code fragments (snippets) and general design recommendations.
