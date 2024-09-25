@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import {DEFAULT_CLASS, defaultProps, propTypes } from "./config"
+import * as cfg from "./code"
 // ------------------------------------------------------------------------- //
 // React Component (classic version)
 // ------------------------------------------------------------------------- //
@@ -25,7 +25,7 @@ export const Component = props => {
 	);
 };
 
-Component.propTypes = propTypes;
-export const NativeExample = {Component, defaultProps}
+Component.propTypes = cfg.propTypes;
+export const NativeExample = {cfg, Component}
 
 // ------------------------------------------------------------------------- //

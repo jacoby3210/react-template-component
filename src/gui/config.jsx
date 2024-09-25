@@ -1,26 +1,37 @@
 import PropTypes from 'prop-types';
-import * as cfg from '/src/gui/config'
-import * as code from "./code"
 // ------------------------------------------------------------------------- //
 // Constants
 // ------------------------------------------------------------------------- //
 
-export const CSS_CLASS_DEFAULT = `${cfg.CSS_CLASS_DEFAULT}-class`;
+export const CSS_CLASS_DEFAULT = 'prefix-component';
 
 // ------------------------------------------------------------------------- //
 // Type checking.
 // ------------------------------------------------------------------------- //
 
 export const propTypes = {
-	... cfg.propTypes,
-}
+	children: PropTypes.oneOfType([
+		PropTypes.array,
+		PropTypes.object,
+		PropTypes.string,
+	]),
+	className: PropTypes.oneOfType([
+		PropTypes.string,
+		PropTypes.array,
+		PropTypes.object,
+	]),
+	id: PropTypes.string,
+};
 
 // ------------------------------------------------------------------------- //
 // Values by default.
 // ------------------------------------------------------------------------- //
 
-export const propValues = {
-	... cfg.propValues(CSS_CLASS_DEFAULT),
-}
+export const propValues = (className, id = null) => ({
+	children: [],
+	className,
+	id: id,
+});
+
 
 // ------------------------------------------------------------------------- //

@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import {DEFAULT_CLASS, defaultProps, propTypes } from "./config"
+import * as cfg from "./config"
 // ------------------------------------------------------------------------- //
 // React Component (forwardRef version) 
 // ------------------------------------------------------------------------- //
 
-export const Example = React.forwardRef((receivedProps, ref) => {
+export const Component = React.forwardRef((receivedProps, ref) => {
 
 	// initial data
 	const {id, children, ...attributes} = props;
@@ -24,8 +24,7 @@ export const Example = React.forwardRef((receivedProps, ref) => {
 	);
 });
 
-Example.propTypes = propTypes;
-export const NativeExample = {Component, defaultProps}
-
+Component.propTypes = cfg.propTypes;
+export const NativeExample = {cfg, Component}
 
 // ------------------------------------------------------------------------- //
