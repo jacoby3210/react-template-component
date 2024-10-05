@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
-import * as cfg from "./code"
+import * as cfg from "./config"
+import * as code from "./code"
 // ------------------------------------------------------------------------- //
 // React Component (classic version)
 // ------------------------------------------------------------------------- //
